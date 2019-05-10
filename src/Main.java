@@ -1,10 +1,41 @@
+import java.util.Scanner;
+
 public class Main {
 
     public static void main(String[] args) {
 
+        count();
+    }
+
+    /**
+     * Ask a quantity and price and calculates the total
+     */
+    public static void count() {
+
+        // Leer de teclado
+        Scanner scanner = new Scanner(System.in);
+        //String line = scanner.nextLine();
+        //int num = Integer.parseInt( scanner.nextLine() );
+        //double num2 = Double.parseDouble( scanner.nextLine() );
+
+        System.out.print("tell me the quantity: ");
+        int quantity = Integer.parseInt( scanner.nextLine() );
+        System.out.print("tell me the price: ");
+        double price = Double.parseDouble( scanner.nextLine() );
+        double total = quantity * price;
+        System.out.println("the result is: " + total);
+    }
+
+    /**
+     * Basic examples
+     */
+    public static void hello() {
+
         System.out.println("hello world");
 
         String name = "jaume";
+
+        // type name = expression;
         String message = "hola " + name;
 
         // shortcut: sout
@@ -22,4 +53,5 @@ public class Main {
 
         System.out.println("El total es: " + total);
     }
+
 }
