@@ -4,8 +4,30 @@ public class Main {
 
     public static void main(String[] args) {
 
-        count();
+        comparing();
     }
+
+
+
+    /**
+     * Reads 2 numbers from keyboard and tells which one is bigger
+     */
+    public static void comparing() {
+
+        // Leer de teclado
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("tell me the first number: ");
+        int num1 = Integer.parseInt( scanner.nextLine() );
+        System.out.print("tell me the second number: ");
+        int num2 = Integer.parseInt( scanner.nextLine() );
+
+        if (num1 > num2) {
+            System.out.println("The biggest is: " + num1);
+        } else {
+            System.out.println("The biggest is: " + num2);
+        }
+    }
+
 
     /**
      * Ask a quantity and price and calculates the total
