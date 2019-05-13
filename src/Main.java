@@ -4,7 +4,22 @@ public class Main {
 
     public static void main(String[] args) {
 
-        who();
+        System.out.println("---");
+        printNumbers(7, 13); // pass arguments when you call a function
+        System.out.println("---");
+        printNumbers(5, 8); // you can call the function as many times as you want
+    }
+
+    /**
+     * Write numbers from 1 to 10
+     */
+    public static void printNumbers(int begin, int end) { // parameters that the function receives
+
+        int i = begin;
+        while (i <= end) {
+            System.out.println(i);
+            i = i + 1;
+        }
     }
 
     /**
@@ -60,7 +75,7 @@ public class Main {
         //double num2 = Double.parseDouble( scanner.nextLine() );
 
         System.out.print("tell me the quantity: ");
-        int quantity = Integer.parseInt( scanner.nextLine() );
+        int quantity = Integer.parseInt( scanner.nextLine() ); // We need to convert the String to an int
         System.out.print("tell me the price: ");
         double price = Double.parseDouble( scanner.nextLine() );
         double total = quantity * price;
