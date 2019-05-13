@@ -4,14 +4,28 @@ public class Main {
 
     public static void main(String[] args) {
 
-        System.out.println("---");
-        printNumbers(7, 13); // pass arguments when you call a function
-        System.out.println("---");
-        printNumbers(5, 8); // you can call the function as many times as you want
+        int res = sumNumbers(1, 6);
+
+        System.out.println(res);
     }
 
     /**
-     * Write numbers from 1 to 10
+     * Sum numbers from begin to end
+     */
+    public static int sumNumbers(int begin, int end) { // parameters that the function receives
+
+        int sum = 0;
+        int i = begin;
+        while (i <= end) {
+            sum = sum + i;
+            i = i + 1;
+        }
+
+        return sum;
+    }
+
+    /**
+     * Write numbers from begin to end
      */
     public static void printNumbers(int begin, int end) { // parameters that the function receives
 
