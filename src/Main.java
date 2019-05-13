@@ -12,19 +12,21 @@ public class Main {
      * are (age) and apears the condition of "you are old" if the age is higher than 21 and
      * "you are young" otherwise.
     */
-public static void who() {
-    Scanner scanner = new Scanner(System.in);
-    System.out.print("What is your name? ");
-    String name = scanner.nextLine();
-    System.out.print("How old are you? ");
-    int age = Integer.parseInt(scanner.nextLine());
+    public static void who() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("What is your name? ");
+        String name = scanner.nextLine();
+        System.out.print("How old are you? ");
+        int age = Integer.parseInt(scanner.nextLine());
 
-    if (age>21) {
-        System.out.println("You are old");
-    } else{
-        System.out.println("You are young");
+        String msg = "Hello " + name + ", since you are " + age + " you are ";
+
+        if (age>21) {
+            System.out.println(msg + "old");
+        } else{
+            System.out.println(msg + "young");
+        }
     }
-}
 
     /**
      * Reads 2 numbers from keyboard and tells which one is bigger
