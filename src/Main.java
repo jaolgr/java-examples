@@ -4,10 +4,27 @@ public class Main {
 
     public static void main(String[] args) {
 
-        comparing();
+        who();
     }
 
+    /**
+    * Create a fuction that asks my name, my age and returns a sentence that says: Hello (name) you
+     * are (age) and apears the condition of "you are old" if the age is higher than 21 and
+     * "you are young" otherwise.
+    */
+public static void who() {
+    Scanner scanner = new Scanner(System.in);
+    System.out.print("What is your name? ");
+    String name = scanner.nextLine();
+    System.out.print("How old are you? ");
+    int age = Integer.parseInt(scanner.nextLine());
 
+    if (age>21) {
+        System.out.println("You are old");
+    } else{
+        System.out.println("You are young");
+    }
+}
 
     /**
      * Reads 2 numbers from keyboard and tells which one is bigger
