@@ -1,13 +1,24 @@
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
 
   public static void main(String[] args) {
 
-    int res = factorial( sumNumbers(1, 3) ) // wrap line
-        + sumNumbers(1, 10);
+    String msg = "hello";
 
-    System.out.println(res);
+    List<String> words = new ArrayList<>(); // create an empty list of strings
+
+    words.add("hat");
+    words.add("shoes");
+    words.add("shirt");
+
+    String second = words.get(1);
+
+    System.out.println(second);
+
+    System.out.println( words.size() + " words");
   }
 
   /**
