@@ -8,6 +8,8 @@ public class Main {
 
     String msg = "hello";
 
+    List<Integer> numbers = new ArrayList<>(); // create an empty list of integers
+
     List<String> words = new ArrayList<>(); // create an empty list of strings
 
     words.add("hat");
@@ -19,7 +21,29 @@ public class Main {
     System.out.println(second);
 
     System.out.println( words.size() + " words");
+
+    System.out.println(words);
+
+    String w = "end";
+
+    if (w.equals("end")) {
+      System.out.println("iguales");
+    }
   }
+
+  /**
+   * Write a function that returns the power.
+   * power(2, 4) should return 16
+   */
+
+  /**
+   * Ask numbers to the user.
+   * Add those numbers into a list until the user enters a zero.
+   * Then display the list.
+   *
+   * If the function just displays the list, the return type is void.
+   * But you can also try to return the list, so the return type is List<Integer>.
+   */
 
   /**
    * Factorial
