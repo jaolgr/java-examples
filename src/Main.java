@@ -2,10 +2,20 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+//Importado de internet
+import java.lang.Math; // importing java.lang package
+
+
 public class Main {
 
   public static void main(String[] args) {
 
+    GFG();
+
+
+    }
+
+ public static void numbers() {
     String msg = "hello";
 
     List<Integer> numbers = new ArrayList<>(); // create an empty list of integers
@@ -26,15 +36,61 @@ public class Main {
 
     String w = "end";
 
-    if (w.equals("end")) {
+      if (w.equals("end")) {
       System.out.println("iguales");
+      }
     }
-  }
 
   /**
    * Write a function that returns the power.
    * power(2, 4) should return 16
    */
+
+  public static int power () {
+
+    Scanner scanner = new Scanner(System.in);
+    System.out.println("Enter the base number: ");
+    int base = Integer.parseInt(scanner.nextLine());
+    System.out.println("Enter the power number: ");
+    int i = Integer.parseInt(scanner.nextLine());
+
+    int result = base;
+    int value = 2;
+
+    while (value <= i) {
+
+      result = result * base;
+      value = value + 1;
+
+    }
+
+    System.out.println("the result is: " + result);
+    return result;
+  }
+
+
+  /**
+   * Function pow () found in internet
+   */
+
+  public static void GFG () {
+
+    Scanner scanner = new Scanner(System.in);
+    System.out.println("Enter the base number: ");
+      int base = Integer.parseInt(scanner.nextLine());
+    System.out.println("Enter the power number: ");
+      int i = Integer.parseInt(scanner.nextLine());
+
+      double nan = Double.NaN;
+      double result;
+
+      // Here second argument is NaN,
+      // output will be NaN
+      result = Math.pow(base, i);
+      System.out.println(result);
+
+  }
+
 
   /**
    * Ask numbers to the user.
@@ -46,20 +102,72 @@ public class Main {
    */
 
   /**
-   * Factorial
+public static int numbersList () {
+
+  Scanner scanner = new Scanner(System.in);
+  System.out.println("Write numbers to print a list: ");
+
+  int number = Integer.parseInt(scanner.nextLine());
+  int equals = 0;
+
+  while (number != equals){
+    number = number;
+  }
+  return equals;
+
+  /**
+  List<Integer> numbersList = new ArrayList<>(); // create an empty list of integers
+  numbersList.add();
+
    */
-  public static int factorial(int n) {
+  /**String w = "0";
+
+  if (w.equals("0")) {
+    System.out.println("The values are: ");
+
+  }
+return equals; */
+
+}
+
+/**
+  public static int factorial1 (int n) {
 
     int result = 1;
-
     int i = 1;
     while (i <= n) {
-      result = i * result;
-      i = i + 1;
+
+      result = result * i;
+      i = i +1;
+
+      return result;
     }
 
-    return result;
-  }
+    }
+
+*/
+
+  /**
+  * Factorial
+  *
+  */
+
+  public static int factorial(int n) {
+
+
+      int result = 1;
+
+      int i = 1;
+      while (i <= n) {
+        result = i * result;
+        i = i + 1;
+      }
+
+      return result;
+
+    }
+
+
 
   /**
    * Sum numbers from begin to end
@@ -80,6 +188,7 @@ public class Main {
   /**
    * Write numbers from begin to end
    */
+
   public static void printNumbers(int begin, int end) { // parameters that the function receives
 
     int i = begin;
@@ -94,6 +203,7 @@ public class Main {
    * are (age) and apears the condition of "you are old" if the age is higher than 21 and "you are
    * young" otherwise.
    */
+
   public static void who() {
     Scanner scanner = new Scanner(System.in);
     System.out.print("What is your name? ");
@@ -113,6 +223,7 @@ public class Main {
   /**
    * Reads 2 numbers from keyboard and tells which one is bigger
    */
+
   public static void comparing() {
 
     // Leer de teclado
@@ -130,9 +241,11 @@ public class Main {
   }
 
 
+
   /**
    * Ask a quantity and price and calculates the total
    */
+
   public static void count() {
 
     // Leer de teclado
@@ -149,9 +262,11 @@ public class Main {
     System.out.println("the result is: " + total);
   }
 
+
   /**
    * Basic examples
    */
+
   public static void hello() {
 
     System.out.println("hello world");
@@ -178,3 +293,7 @@ public class Main {
   }
 
 }
+
+
+
+
