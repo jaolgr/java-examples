@@ -10,12 +10,22 @@ public class Main {
 
   public static void main(String[] args) {
 
-    GFG();
+    //prueba de como hacer la funcion dentro de power
+    // int res = power(int base, int n);
+    int x = 5;
 
+    Scanner scanner = new Scanner(System.in);
+    System.out.print("Enter the base number: ");
+    int base = Integer.parseInt(scanner.nextLine());
+    System.out.print("Enter the exp number: ");
+    int exp = Integer.parseInt(scanner.nextLine());
 
-    }
+    int y = power(base, exp);
 
- public static void numbers() {
+    System.out.println("y = " + y);
+  }
+
+  public static void numbers() {
     String msg = "hello";
 
     List<Integer> numbers = new ArrayList<>(); // create an empty list of integers
@@ -30,23 +40,67 @@ public class Main {
 
     System.out.println(second);
 
-    System.out.println( words.size() + " words");
+    System.out.println(words.size() + " words");
 
     System.out.println(words);
 
     String w = "end";
 
-      if (w.equals("end")) {
+    if (w.equals("end")) {
       System.out.println("iguales");
-      }
     }
+  }
 
   /**
-   * Write a function that returns the power.
-   * power(2, 4) should return 16
+   * returns base powered to exp. E.g power(2, 4) returns 16.
+   */
+  public static int power(int base, int exp) {
+
+    int result = 1;
+
+    int i = 1;
+
+    while (i <= exp) {
+
+      result = result * base;
+      i = i + 1;
+    }
+
+    return result;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /**
+   * Function pow () found in internet
    */
 
-  public static int power () {
+  public static void GFG() {
 
     Scanner scanner = new Scanner(System.in);
     System.out.println("Enter the base number: ");
@@ -54,119 +108,91 @@ public class Main {
     System.out.println("Enter the power number: ");
     int i = Integer.parseInt(scanner.nextLine());
 
-    int result = base;
-    int value = 2;
+    double nan = Double.NaN;
+    double result;
 
-    while (value <= i) {
+    // Here second argument is NaN,
+    // output will be NaN
+    result = Math.pow(base, i);
+    System.out.println(result);
 
-      result = result * base;
-      value = value + 1;
-
-    }
-
-    System.out.println("the result is: " + result);
-    return result;
   }
 
 
   /**
-   * Function pow () found in internet
+   * Ask numbers to the user. Add those numbers into a list until the user enters a zero. Then
+   * display the list.
+   *
+   * If the function just displays the list, the return type is void. But you can also try to return
+   * the list, so the return type is List<Integer>.
    */
 
-  public static void GFG () {
+
+  public static int numbersList() {
 
     Scanner scanner = new Scanner(System.in);
-    System.out.println("Enter the base number: ");
-      int base = Integer.parseInt(scanner.nextLine());
-    System.out.println("Enter the power number: ");
-      int i = Integer.parseInt(scanner.nextLine());
+    System.out.println("Write numbers to print a list: ");
 
-      double nan = Double.NaN;
-      double result;
+    int number = Integer.parseInt(scanner.nextLine());
+    int equals = 0;
 
-      // Here second argument is NaN,
-      // output will be NaN
-      result = Math.pow(base, i);
-      System.out.println(result);
+    while (number != equals) {
+      number = number;
+    }
 
-  }
+    List<Integer> numbersList = new ArrayList<>(); // create an empty list of integers
+    numbersList.add(2);
+    /**
+     while (sc.hasNextInt()) {
+     int i = sc.nextInt();
+     numbersList.add(i);
 
+     */
+    /**String w = "0";
 
-  /**
-   * Ask numbers to the user.
-   * Add those numbers into a list until the user enters a zero.
-   * Then display the list.
-   *
-   * If the function just displays the list, the return type is void.
-   * But you can also try to return the list, so the return type is List<Integer>.
-   */
+     if (w.equals("0")) {
+     System.out.println("The values are: ");
 
-  /**
-public static int numbersList () {
-
-  Scanner scanner = new Scanner(System.in);
-  System.out.println("Write numbers to print a list: ");
-
-  int number = Integer.parseInt(scanner.nextLine());
-  int equals = 0;
-
-  while (number != equals){
-    number = number;
-  }
-  return equals;
-
-  /**
-  List<Integer> numbersList = new ArrayList<>(); // create an empty list of integers
-  numbersList.add();
-
-   */
-  /**String w = "0";
-
-  if (w.equals("0")) {
-    System.out.println("The values are: ");
+     }
+     return equals; */
+    return equals;
 
   }
-return equals; */
-
-}
 
 /**
-  public static int factorial1 (int n) {
+ public static int factorial1 (int n) {
 
-    int result = 1;
-    int i = 1;
-    while (i <= n) {
+ int result = 1;
+ int i = 1;
+ while (i <= n) {
 
-      result = result * i;
-      i = i +1;
+ result = result * i;
+ i = i +1;
 
-      return result;
-    }
+ return result;
+ }
 
-    }
+ }
 
-*/
+ */
 
   /**
-  * Factorial
-  *
-  */
+   * Factorial
+   */
 
   public static int factorial(int n) {
 
+    int result = 1;
 
-      int result = 1;
-
-      int i = 1;
-      while (i <= n) {
-        result = i * result;
-        i = i + 1;
-      }
-
-      return result;
-
+    int i = 1;
+    while (i <= n) {
+      result = i * result;
+      i = i + 1;
     }
 
+    return result;
+
+  }
 
 
   /**
@@ -239,7 +265,6 @@ return equals; */
       System.out.println("The biggest is: " + num2);
     }
   }
-
 
 
   /**
