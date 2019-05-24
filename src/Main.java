@@ -10,9 +10,10 @@ public class Main {
 
   public static void main(String[] args) {
 
-    //prueba de como hacer la funcion dentro de power
-    // int res = power(int base, int n);
-    int x = 5;
+    numbersList();
+  }
+
+  private static void doPower() {
 
     Scanner scanner = new Scanner(System.in);
     System.out.print("Enter the base number: ");
@@ -120,42 +121,29 @@ public class Main {
 
 
   /**
-   * Ask numbers to the user. Add those numbers into a list until the user enters a zero. Then
-   * display the list.
+   * Ask numbers to the user. Add those numbers into a list until the user enters a zero.
+   * Then display the list.
    *
    * If the function just displays the list, the return type is void. But you can also try to return
    * the list, so the return type is List<Integer>.
    */
-
-
-  public static int numbersList() {
+  public static void numbersList() {
 
     Scanner scanner = new Scanner(System.in);
     System.out.println("Write numbers to print a list: ");
 
-    int number = Integer.parseInt(scanner.nextLine());
-    int equals = 0;
+    List<Integer> list = new ArrayList<>(); // create an empty list of integers
 
-    while (number != equals) {
-      number = number;
+    int number = Integer.parseInt(scanner.nextLine());
+
+    while (number != 0) {
+
+      list.add(number);
+
+      number = Integer.parseInt(scanner.nextLine());
     }
 
-    List<Integer> numbersList = new ArrayList<>(); // create an empty list of integers
-    numbersList.add(2);
-    /**
-     while (sc.hasNextInt()) {
-     int i = sc.nextInt();
-     numbersList.add(i);
-
-     */
-    /**String w = "0";
-
-     if (w.equals("0")) {
-     System.out.println("The values are: ");
-
-     }
-     return equals; */
-    return equals;
+    System.out.println(list);
 
   }
 
