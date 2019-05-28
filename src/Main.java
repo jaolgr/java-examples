@@ -71,36 +71,9 @@ public class Main {
   }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   /**
    * Function pow () found in internet
    */
-
   public static void GFG() {
 
     Scanner scanner = new Scanner(System.in);
@@ -143,7 +116,26 @@ public class Main {
       number = Integer.parseInt(scanner.nextLine());
     }
 
+    // Do not print here like before
+    // System.out.println(list);
+
+    List<String> order = new ArrayList<>(); // create an empty list of strings
+
+    int i = 0;
+
+    int orderNum = list.get(i);
+
+
+    while (i <= list.size()) {
+
+      orderNum = list.get(i);
+      i = i + 1;
+
+      // get, add, size, añadir indices e imprimir en orden en la lista
+    }
+
     System.out.println(list);
+    System.out.println(orderNum);
 
   }
 
