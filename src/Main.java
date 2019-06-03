@@ -5,8 +5,6 @@ import java.util.Scanner;
 
 //Importado para el indexOf
 
-import java.lang.Object;
-
 //Importado de internet
 import java.lang.Math; // importing java.lang package
 
@@ -15,8 +13,17 @@ public class Main {
 
   public static void main(String[] args) {
 
-    numbersList();
-  }
+    List<Integer> list = new ArrayList<>();
+
+    list.add(6);
+    list.add(8);
+    list.add(2);
+
+    int total = sumList(list);
+
+    System.out.println("total = " + total);
+
+   }
 
   /**
    * Create a function int fib(int n) which calculates the Fibonacci number n.
@@ -27,14 +34,61 @@ public class Main {
    * fib(4) is 3
    * fib(5) is 5
    */
+  void fib() {
 
-
+  }
 
   /**
-   * Write a function that creates a list with the pair numbers from 2 to 10.
-   * After all, "recorre la lista", sum the numbers and show the result. It showld be 30.
+   * Given a list of integers returns the sum of all numbers
+   */
+  public static int sumList(List<Integer> list) {
+
+    int sum = 0;
+    int i = 0;
+
+    while (i < list.size()) {
+
+      int num = list.get(i);
+      sum += num;
+      i++;
+    }
+
+    return sum;
+  }
+
+  /**
+   * Write a function that creates a list with the even numbers from 2 to 10.
+   * After that, iterate the list, sum the numbers and show the result. It should be 30.
   */
 
+  public static void sumPairNum() {
+
+    List<Integer> list = new ArrayList<>(); // create an empty list of integers
+
+    int n = 2;
+
+    while (n <= 10){
+      list.add(n);
+      n = n + 2;
+    }
+
+
+    int sum = 0;
+    int i = 0;
+    while (i < list.size()) {
+      int num = list.get(i);
+      sum += num; //the same as sum = sum + num;
+      i++; // the same as i = i + 1;
+    }
+    System.out.println("sum = " + sum); //shortcut soutv
+
+
+    int sum2 = 0;
+    for (int num : list) { //shortcut iter
+      sum2 += num;
+    }
+    System.out.println("sum2 = " + sum2);
+  }
 
 
   /**
@@ -67,11 +121,9 @@ public class Main {
 
     int i = 0;
 
-    int orderNum = list.get(i);
-
     while (i < list.size()) {
 
-      orderNum = list.get(i);
+      int orderNum = list.get(i);
 
       //List in a row showing the index of entered number followed by the entered numbers in a brackets
       // At the end of this list there is a list in brackets with the numbers ordered from small to big
