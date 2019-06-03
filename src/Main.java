@@ -1,6 +1,11 @@
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
+
+//Importado para el indexOf
+
+import java.lang.Object;
 
 //Importado de internet
 import java.lang.Math; // importing java.lang package
@@ -13,17 +18,77 @@ public class Main {
     numbersList();
   }
 
-  private static void doPower() {
+  /**
+   * Create a function int fib(int n) which calculates the Fibonacci number n.
+   *
+   * fib(1) is 1
+   * fib(2) is 1
+   * fib(3) is 2
+   * fib(4) is 3
+   * fib(5) is 5
+   */
+
+
+
+  /**
+   * Write a function that creates a list with the pair numbers from 2 to 10.
+   * After all, "recorre la lista", sum the numbers and show the result. It showld be 30.
+  */
+
+
+
+  /**
+   * Ask numbers to the user. Add those numbers into a list until the user enters a zero. Then
+   * display the list.
+   *
+   * If the function just displays the list, the return type is void. But you can also try to return
+   * the list, so the return type is List<Integer>.
+   */
+  public static void numbersList() {
 
     Scanner scanner = new Scanner(System.in);
-    System.out.print("Enter the base number: ");
-    int base = Integer.parseInt(scanner.nextLine());
-    System.out.print("Enter the exp number: ");
-    int exp = Integer.parseInt(scanner.nextLine());
+    System.out.println("Write numbers to print a list: ");
 
-    int y = power(base, exp);
+    List<Integer> list = new ArrayList<>(); // create an empty list of integers
 
-    System.out.println("y = " + y);
+    int number = Integer.parseInt(scanner.nextLine());
+
+    while (number != 0) {
+
+      list.add(number);
+
+      number = Integer.parseInt(scanner.nextLine());
+    }
+
+    // Do not print here like before
+    // System.out.println(list);
+
+    List<String> order = new ArrayList<>(); // create an empty list of strings
+
+    int i = 0;
+
+    int orderNum = list.get(i);
+
+    while (i < list.size()) {
+
+      orderNum = list.get(i);
+
+      //List in a row showing the index of entered number followed by the entered numbers in a brackets
+      // At the end of this list there is a list in brackets with the numbers ordered from small to big
+      System.out.print(list.indexOf(orderNum) + "[" + list.get(i) + "], ");
+
+      i = i + 1;
+
+      // get, add, size, añadir indices e imprimir en orden en la lista
+    }
+
+    Collections.sort(list);
+    System.out.println("//" + list);
+
+    //System.out.println(i);
+
+    //acabar System.out.println(list.indexOf(1));
+
   }
 
   public static void numbers() {
@@ -51,6 +116,23 @@ public class Main {
       System.out.println("iguales");
     }
   }
+
+  /**
+   * Power using a function
+   */
+  private static void doPower() {
+
+    Scanner scanner = new Scanner(System.in);
+    System.out.print("Enter the base number: ");
+    int base = Integer.parseInt(scanner.nextLine());
+    System.out.print("Enter the exp number: ");
+    int exp = Integer.parseInt(scanner.nextLine());
+
+    int y = power(base, exp);
+
+    System.out.println("y = " + y);
+  }
+
 
   /**
    * returns base powered to exp. E.g power(2, 4) returns 16.
@@ -89,53 +171,6 @@ public class Main {
     // output will be NaN
     result = Math.pow(base, i);
     System.out.println(result);
-
-  }
-
-
-  /**
-   * Ask numbers to the user. Add those numbers into a list until the user enters a zero.
-   * Then display the list.
-   *
-   * If the function just displays the list, the return type is void. But you can also try to return
-   * the list, so the return type is List<Integer>.
-   */
-  public static void numbersList() {
-
-    Scanner scanner = new Scanner(System.in);
-    System.out.println("Write numbers to print a list: ");
-
-    List<Integer> list = new ArrayList<>(); // create an empty list of integers
-
-    int number = Integer.parseInt(scanner.nextLine());
-
-    while (number != 0) {
-
-      list.add(number);
-
-      number = Integer.parseInt(scanner.nextLine());
-    }
-
-    // Do not print here like before
-    // System.out.println(list);
-
-    List<String> order = new ArrayList<>(); // create an empty list of strings
-
-    int i = 0;
-
-    int orderNum = list.get(i);
-
-
-    while (i <= list.size()) {
-
-      orderNum = list.get(i);
-      i = i + 1;
-
-      // get, add, size, añadir indices e imprimir en orden en la lista
-    }
-
-    System.out.println(list);
-    System.out.println(orderNum);
 
   }
 
