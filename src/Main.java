@@ -1,3 +1,5 @@
+import java.io.File;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -11,7 +13,34 @@ import java.lang.Math; // importing java.lang package
 
 public class Main {
 
-  public static void main(String[] args) {
+  public static void main(String[] args) throws Exception {
+
+    callSumListFromFile();
+
+  }
+
+  private static void callSumListFromFile() throws Exception {
+
+    Scanner scanner = new Scanner(new File("prices.txt"));
+
+    //scanner.hasNext()
+    int sum = 0;
+
+    while (scanner.hasNext()) {
+
+      int n = Integer.parseInt(scanner.nextLine());
+      sum += n;
+    }
+
+    System.out.println("sum = " + sum);
+
+    PrintWriter writer = new PrintWriter(new File("result.csv"));
+    writer.println("Nombre,Cantidad");
+    writer.println("suma," + sum);
+    writer.close();
+  }
+
+  private static void callSumList() {
 
     List<Integer> list = new ArrayList<>();
 
@@ -22,8 +51,7 @@ public class Main {
     int total = sumList(list);
 
     System.out.println("total = " + total);
-
-   }
+  }
 
   /**
    * Create a function int fib(int n) which calculates the Fibonacci number n.
