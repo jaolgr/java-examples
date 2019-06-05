@@ -15,7 +15,7 @@ public class Main {
 
   public static void main(String[] args) throws Exception {
 
-    callSumListFromFile();
+    fib();
 
   }
 
@@ -62,9 +62,32 @@ public class Main {
    * fib(4) is 3
    * fib(5) is 5
    */
-  void fib() {
+ public static void fib() {
 
-  }
+   List<Integer> list = new ArrayList<>();
+
+   Scanner scanner = new Scanner(System.in);
+   System.out.println("Write the number of iterations: ");
+
+   int end = Integer.parseInt(scanner.nextLine());
+
+   int i = 0;
+   int sum = 0;
+   int result = 1;
+
+   while (i < end){
+
+     list.add(result);
+     result = sum + result;
+     sum = sum + result;
+     i++;
+
+     System.out.print(result + ", ");
+     System.out.print(sum + ", ");
+   }
+   System.out.println("// result = " + result);
+
+ }
 
   /**
    * Given a list of integers returns the sum of all numbers
