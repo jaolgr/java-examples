@@ -15,7 +15,7 @@ public class Main {
 
   public static void main(String[] args) throws Exception {
 
-    IncomeExpenseFromFile();
+    sumArray();
 
   }
 
@@ -78,16 +78,42 @@ public class Main {
     writer.close();
   }
 
+  public static void sumArray (){
+
+    int[] array; // Declares an array
+
+    array = new int[3]; // Creates an array of 3 positions
+
+    array[0] = 6; // Assign a value to the array position
+    array[1] = 9;
+    array[2] = 2;
+
+    int sum = 0;
+    int i = 0;
+
+    while (i < array.length){ // Gets the size of the array
+
+      sum += array[i]; // Obtains the value of the array index
+      i++;
+
+    }
+    System.out.println("sum = " + sum);
+  }
+
   /**
    * Add numbers in a list and sum and show them
    */
   private static void callSumList() {
 
-    List<Integer> list = new ArrayList<>();
+    List<Integer> list; //Declaring
+
+    list = new ArrayList<>(); //Creating and Assigning
 
     list.add(6);
     list.add(8);
     list.add(2);
+
+    list.set(1,9); //Changes the value using the index and the new value
 
     int total = sumList(list);
 
