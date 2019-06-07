@@ -50,8 +50,7 @@ public class Main {
 
     PrintWriter writer = new PrintWriter(new File("Production.csv"));
     writer.println("Name,Income,Expenses");
-    writer.println("sumExpenses = " + sumExpenses);
-    writer.println("sumIncome = " + sumIncome);
+    writer.println("sumExpenses," + sumIncome + "," + sumExpenses);
     writer.close();
   }
 
