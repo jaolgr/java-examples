@@ -15,10 +15,49 @@ public class Main {
 
   public static void main(String[] args) throws Exception {
 
-    fib();
+    IncomeExpenseFromFile();
 
   }
 
+  /**
+   * Read numbers from a .txt file. If the numbers are positive (they are Income) or if the numbers are
+   * negative (they are Expenses). The program sums all the Incomes and Expenses separately.
+   * Finally the results are shown in another .csv file.
+   */
+  private static void IncomeExpenseFromFile() throws Exception {
+
+    Scanner scanner = new Scanner(new File("IncomeExpenses.txt"));
+
+    //scanner.hasNext()
+    int sumIncome = 0;
+    int sumExpenses = 0;
+
+    while (scanner.hasNext()) {
+
+      int n = Integer.parseInt(scanner.nextLine());
+
+      if (n > 0){
+        sumIncome += n;
+
+      } else {
+        sumExpenses += n;
+
+      }
+    }
+
+    System.out.println("sumExpenses = " + sumExpenses);
+    System.out.println("sumIncome = " + sumIncome);
+
+    PrintWriter writer = new PrintWriter(new File("Production.csv"));
+    writer.println("Name,Income,Expenses");
+    writer.println("sumExpenses = " + sumExpenses);
+    writer.println("sumIncome = " + sumIncome);
+    writer.close();
+  }
+
+  /**
+   * Import ans export files
+   */
   private static void callSumListFromFile() throws Exception {
 
     Scanner scanner = new Scanner(new File("prices.txt"));
@@ -40,6 +79,9 @@ public class Main {
     writer.close();
   }
 
+  /**
+   * Add numbers in a list and sum and show them
+   */
   private static void callSumList() {
 
     List<Integer> list = new ArrayList<>();
