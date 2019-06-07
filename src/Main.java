@@ -15,7 +15,7 @@ public class Main {
 
   public static void main(String[] args) throws Exception {
 
-    sumArray();
+    splitString();
 
   }
 
@@ -76,6 +76,30 @@ public class Main {
     writer.println("Nombre,Cantidad");
     writer.println("suma," + sum);
     writer.close();
+  }
+
+  public static void splitString () {
+
+    String text = "pera,manzana,arroz blanco,banana,melon";
+
+    System.out.println(text.length());
+
+    String[] array = text.split(",");
+
+    int i = 0;
+
+    int length = array.length;
+
+    while (i < length) {
+
+      String s = array[i]; //HINTS Refactor Extract Variable / Inline Variable
+
+      if (s.length() > 5){
+        System.out.println(s);
+      }
+      i++;
+
+    }
   }
 
   public static void sumArray (){
