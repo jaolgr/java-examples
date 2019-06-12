@@ -15,8 +15,37 @@ public class Main {
 
   public static void main(String[] args) throws Exception {
 
-    splitString();
+    longWord();
 
+  }
+
+
+  /**
+   * Write a function that takes a string that contains words separated by spaces
+   * and returns the longest word.
+   */
+  public static String longWord() {
+
+    String words = "shoes hat jeans t-shirt trousers jacket socks";
+    String[] array = words.split(" ");
+
+    int i =0;
+    int length = array.length;
+    String longest = array[i];
+
+    while (i < length) {
+
+      int length1 = longest.length();
+      int length2 = array[i].length();
+
+      if (length1 < length2) {
+        longest = array[i];
+      }
+      i++;
+    }
+
+    System.out.println("longest = " + longest);
+    return longest;
   }
 
   /**
@@ -78,6 +107,11 @@ public class Main {
     writer.close();
   }
 
+  /**
+   * Declares a String, print the number of characters, splits the String by the operator ,
+   * declares the length of an array and compares the number of the characters. If the word is
+   * longer than 5 characters it will be printed
+   */
   public static void splitString () {
 
     String text = "pera,manzana,arroz blanco,banana,melon";
@@ -101,6 +135,11 @@ public class Main {
 
     }
   }
+
+  /**
+   * Creates an array of 3 positions, Assign a value to the array position, Assign a value
+   * to the array position, Gets the size of the array, Obtains the value of the array index
+   */
 
   public static void sumArray (){
 
@@ -153,29 +192,56 @@ public class Main {
    * fib(4) is 3
    * fib(5) is 5
    */
+
+  /**
+   * //   ADD THIS TO THE MAIN CALL
+   int x = fib(3);
+   System.out.println("fib 3 es " + x);
+
+   System.out.println( fib(1) );
+   System.out.println( fib(2) );
+   System.out.println( fib(3) );
+   System.out.println( fib(4) );
+   System.out.println( fib(5) );
+   System.out.println( fib(6) );
+   System.out.println( fib(7) );
+
+   //
+
+   */
+    public static int fib(int n) {
+
+    if (n == 1) {
+      return 1;
+    }
+
+    int a = 0;
+    int b = 1;
+
+    int i = 2;
+
+    while (i <= n){
+
+      int temp = a + b;
+      a = b;
+      b = temp;
+
+      i++;
+    }
+
+    return b;
+  }
+
  public static void fib() {
 
-   List<Integer> list = new ArrayList<>();
-
    Scanner scanner = new Scanner(System.in);
+
    System.out.println("Write the number of iterations: ");
 
    int end = Integer.parseInt(scanner.nextLine());
 
-   int i = 0;
-   int sum = 0;
-   int result = 1;
+   int result = fib(end);
 
-   while (i < end){
-
-     list.add(result);
-     result = sum + result;
-     sum = sum + result;
-     i++;
-
-     System.out.print(result + ", ");
-     System.out.print(sum + ", ");
-   }
    System.out.println("// result = " + result);
 
  }
