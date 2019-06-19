@@ -17,6 +17,9 @@ public class Main {
 
     longWord();
 
+    System.out.println(longWord());
+
+
   }
 
 
@@ -44,7 +47,6 @@ public class Main {
       i++;
     }
 
-    System.out.println("longest = " + longest);
     return longest;
   }
 
