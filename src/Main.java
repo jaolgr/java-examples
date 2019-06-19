@@ -15,13 +15,10 @@ public class Main {
 
   public static void main(String[] args) throws Exception {
 
-    longWord();
-
-    System.out.println(longWord());
-
-
+    String a = ("shoes hat jeans t-shirt trousers jacket socks");
+    String mlongest = longWord();
+    System.out.println(mlongest);
   }
-
 
   /**
    * Write a function that takes a string that contains words separated by spaces
@@ -29,8 +26,8 @@ public class Main {
    */
   public static String longWord() {
 
-    String words = "shoes hat jeans t-shirt trousers jacket socks";
-    String[] array = words.split(" ");
+    String a = "shoes hat jeans t-shirt trousers jacket socks";
+    String[] array = a.split(" ");
 
     int i =0;
     int length = array.length;
