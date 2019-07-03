@@ -15,6 +15,45 @@ public class Main {
 
   public static void main(String[] args) throws Exception {
 
+    List<Integer> numbers = new ArrayList<>(); // create an empty list of integers
+
+    //add the words in the list
+    numbers.add(6);
+    numbers.add(9);
+    numbers.add(2);
+    numbers.add(5);
+    numbers.add(4);
+
+    //call the function
+   //TODO
+    sumOfIntegers(numbers);
+    //prints the function
+    System.out.println(sumOfIntegers(numbers));
+ }
+  /**
+   * Write a function that receives a list of numbers (integers) and returns the sum (the return can be a int)
+   */
+public static int sumOfIntegers(List<Integer> numbers) {
+
+  int size = numbers.size();
+  int i = 0;
+  int sum1 = 0;
+  int sum2 = numbers.get(i);
+
+  while (i < size) {
+
+     sum1 = sum1 + sum2;
+     i++;
+  }
+return sum1;
+}
+  /** TODO (it returns always the second string added in the list)
+   * Write a function that receives a list of strings(parameter) and returns the longest string
+   *
+   // This goes after the Main call when using the logWord() function
+   -------
+  public static void main(String[] args) throws Exception {
+
     List<String> fruits = new ArrayList<>(); // create an empty list of strings
 
     //add the words in the list
@@ -25,21 +64,12 @@ public class Main {
     fruits.add("watermelon");
 
     //call the function
-   //TODO
+    //TODO
     longestWord(fruits);
     //prints the function
     System.out.println(longestWord(fruits));
-
- }
-
-  /**
-   * Write a function that receives a list of numbers (integers) and returns the sum (the return can be a int)
-   */
-
-
-  /** TODO (it returns always the second string added in the list)
-   * Write a function that receives a list of strings(parameter) and returns the longest string
-   */
+  }
+*/
 public static String longestWord(List<String> fruits){
 
   int size = fruits.size();
