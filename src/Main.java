@@ -15,19 +15,73 @@ public class Main {
 
   public static void main(String[] args) throws Exception {
 
-    String a = ("shoes hat jeans t-shirt trousers jacket socks");
-    String mlongest = longWord();
-    System.out.println(mlongest);
+    List<String> fruits = new ArrayList<>(); // create an empty list of strings
+
+    //add the words in the list
+    fruits.add("pear");
+    fruits.add("pineapple");
+    fruits.add("banana");
+    fruits.add("apple");
+    fruits.add("watermelon");
+
+    //call the function
+   //TODO
+    longestWord(fruits);
+    //prints the function
+    System.out.println(longestWord(fruits));
+
+ }
+
+  /**
+   * Write a function that receives a list of numbers (integers) and returns the sum (the return can be a int)
+   */
+
+
+  /** TODO (it returns always the second string added in the list)
+   * Write a function that receives a list of strings(parameter) and returns the longest string
+   */
+public static String longestWord(List<String> fruits){
+
+  int size = fruits.size();
+  int i = 0;
+  String longest1 = fruits.get(i);
+  String longest2 = fruits.get(i+1);
+
+  while (i < size) {
+
+    if (longest1.length() <= longest2.length()){
+      return longest2;
+    } else {
+      longest2 = longest1;
+    }
+
+    i= i+1;
+
+    longest1 = fruits.get(i);
   }
+    return longest2;
+
+}
+
+
 
   /**
    * Write a function that takes a string that contains words separated by spaces
    * and returns the longest word.
+   // This goes after the Main call when using the logWord() function
+   * -------
+   *  public static void main(String[] args) throws Exception {
+   *
+   *     String clothes = ("shoes hat jeans t-shirt trousers jacket socks");
+   *     String mlongest = longWord(clothes);
+   *     System.out.println(mlongest);
+   *   }
+   * -------
+   //
    */
-  public static String longWord() {
+  public static String longWord(String clothes) {
 
-    String a = "shoes hat jeans t-shirt trousers jacket socks";
-    String[] array = a.split(" ");
+    String[] array = clothes.split(" ");
 
     int i =0;
     int length = array.length;
