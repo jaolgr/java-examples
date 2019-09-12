@@ -15,6 +15,11 @@ public class Main {
 
   public static void main(String[] args) throws Exception {
 
+    test_sumOfIntegers();
+    test_longestWord();
+  }
+
+  private static void test_sumOfIntegers() {
     List<Integer> numbers = new ArrayList<>(); // create an empty list of integers
 
     //add the words in the list
@@ -25,34 +30,40 @@ public class Main {
     numbers.add(4);
 
     //call the function
-   //TODO
+    //TODO
     sumOfIntegers(numbers);
     //prints the function
     System.out.println(sumOfIntegers(numbers));
- }
+  }
+
   /**
    * Write a function that receives a list of numbers (integers) and returns the sum (the return can be a int)
    */
 public static int sumOfIntegers(List<Integer> numbers) {
 
-  int size = numbers.size();
-  int i = 0;
-  int sum1 = 0;
-  int sum2 = numbers.get(i);
+  int result = 0;
 
-  while (i < size) {
-
-     sum1 = sum1 + sum2;
-     i++;
+  for (int num : numbers) {
+    result = result + num;
   }
-return sum1;
+
+  /* Otra forma de hacerlo
+  int i = 0;
+  while (i < numbers.size()) {
+    int num = numbers.get(i);
+    result = result + num;
+    i++;
+  }
+  */
+
+  return result;
 }
   /** TODO (it returns always the second string added in the list)
    * Write a function that receives a list of strings(parameter) and returns the longest string
    *
    // This goes after the Main call when using the logWord() function
-   -------
-  public static void main(String[] args) throws Exception {
+   -------*/
+  public static void test_longestWord() throws Exception {
 
     List<String> fruits = new ArrayList<>(); // create an empty list of strings
 
@@ -64,32 +75,29 @@ return sum1;
     fruits.add("watermelon");
 
     //call the function
-    //TODO
-    longestWord(fruits);
-    //prints the function
     System.out.println(longestWord(fruits));
+
   }
-*/
+
 public static String longestWord(List<String> fruits){
 
   int size = fruits.size();
+  String result = "";
+
   int i = 0;
-  String longest1 = fruits.get(i);
-  String longest2 = fruits.get(i+1);
 
   while (i < size) {
 
-    if (longest1.length() <= longest2.length()){
-      return longest2;
-    } else {
-      longest2 = longest1;
+    String word = fruits.get(i);
+
+    if (word.length() > result.length()){
+      result = word;
     }
 
-    i= i+1;
-
-    longest1 = fruits.get(i);
+    i++;
   }
-    return longest2;
+
+  return result;
 
 }
 
