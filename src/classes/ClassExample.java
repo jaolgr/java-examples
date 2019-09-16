@@ -16,21 +16,21 @@ public class ClassExample {
 
     ProdList();
 
-    ReturnAList();
+    ReturnAList("electronic","electronic", "music", "music","pharma","pharma");
 
    }
 
   /** Recieves a list of products ( about different types)
    and returns a list of the products of its kind */
 
-  public static List ReturnAList(){
+  public static List ReturnAList(String a, String b, String c, String d, String e, String f){
 
     Product oven = new Product("oven", "electronic");
     Product microwave = new Product("microwave", "electronic");
     Product speaker = new Product("speaker", "music");
     Product guitar = new Product("speaker", "music");
-    Product ibupropheno = new Product("ibupropheno", "pharma");
-    Product paracetamol = new Product("paracetamol", "pharma");
+    Product paracetamol = new Product("ibupropheno", "pharma");
+    Product ibupropheno = new Product("paracetamol", "pharma");
 
     List<Product> products = new ArrayList<>();
 
